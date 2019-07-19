@@ -10,6 +10,13 @@
 
     <title>Fontana Regional Library</title>
     <style>
+      body {
+    background: #143250;
+    color: #fff;
+}
+.card {
+    color: #444;
+}
     img {
       max-width:100%;
     }
@@ -17,9 +24,12 @@
       font-size:1.75em;
       font-weight:bold;
     }
+    a, .btn {
+      font-weight:bold;
+    }
     .d-flex .locations__location-card{
       flex:1 1 400px;
-      margin:.5em;
+      margin:.5em 1em;
     }
     .locations__location-card{
       display:flex;
@@ -27,30 +37,43 @@
     }
     .resources a{
       max-width:150px;
+      display:inline-block;
+      margin:5px;
 
+    }
+    .ncsearch>input{
+      width:100%;
+      max-width:400px;
+    }
+    .info a{
+      color: #ffc107;
     }</style>
   </head>
   <body>
     
     <p></p>
     <div class="container-fluid">
-        <h1>Fontana Regional Library</h1>
+        <div class="row">
+        <div class="col col-md-6 info"><h1>Fontana Regional Library</h1>
         <p>Our website is currently unavailable. You may use the <a href="https://fontana.nccardinal.org">online catalog</a> to find books & media or manage your online library account. Electronic Resources are also still available. If you have any questions, please give us a call. Library contact information is listed below. We apologize for the inconvenience and appreciate your patience.</p>
-      <div class="row d-flex justify-content-around">
-          <div class="card mt-4 mb-4">
+      </div>
+      <div class="col col-md-6 d-flex justify-content-around">
+          <div class="card mt-4 mb-4 flex-grow-1">
             <h4 class="card-header">NC Cardinal Catalog</h4>
 
             <div class="card-body">
               <p>Search for books or <a href="https://fontana.nccardinal.org/eg/opac/login?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain">manage your online account</a>.</p>
             <form action="https://www.nccardinal.org/eg/opac/results" method="GET" target="_blank">
             <div>
-            <div class="ncsearch cf"><input alt="Catalog Search" name="query" placeholder="Find books, audiobooks, magazines, and more..." type="search" /><input name="qtype" type="hidden" value="keyword" /><!-- --><!-- --><button type="submit">Search</button></div>
+            <div class="ncsearch cf"><input alt="Catalog Search" name="query" placeholder="Find books, audiobooks, magazines, and more..." type="search" /><input name="qtype" type="hidden" value="keyword" /><!-- --><!-- --><button type="submit" class="btn btn-warning">Search</button></div>
             <input name="fi:search_format" type="hidden" value="" /> <input name="detail_record_view" type="hidden" value="1" />
             <div class="searchOptions"><span class="searchOption"><input checked="checked" name="locg" type="radio" value="1" /> <label for="locg">All of NC Cardinal</label></span><span class="searchOption"><input name="locg" type="radio" value="155" /> <label for="locg">Fontana Regional Library Collections</label></span></div>
             <small><a href="http://nccardinal.org/eg/opac/advanced" target="_blank">Advanced Search</a></small></div>
             </form></div>
       </div>
         </div>
+        </div>
+
         <div class="clearfix d-flex justify-content-around resources"><a href="https://e-inc.overdrive.com/" target="_blank"><img alt="e-iNC Digital Library eBooks and eAudio through OverDrive" src="https://frlux.github.io/assets/resource-einc.png" /></a> <a href="https://nckids.overdrive.com/" target="_blank"><img alt="NC Kids Digital Library eBooks and eAudio through OverDrive" src="https://frlux.github.io/assets/resource-nckids.png" /></a> <a href="https://login.proxy066.nclive.org/login?url=http://www.nclive.org/cgi-bin/nclsm?rsrc=264" target="_blank"><img alt="RB Digital Library eBooks and eAudio" src="https://frlux.github.io/assets/resource-rbdigital.png" /></a> <a href="https://fontanalib.kanopy.com/" target="_blank"><img alt="Kanopy Streaming Video Library, Movies and Documentaries" src="https://frlux.github.io/assets/resource-kanopy.png" /></a> <a href="https://www.nclive.org/" target="_blank"><img alt="NC LIVE online resources, databases, and more" src="https://frlux.github.io/assets/resource-nclive.png" /></a></div>
         <hr>
       <div class="row d-flex flex-row flex-wrap justify-content-around align-items-stretch"><!----> <div class="mb-4 locations__location-card open"><div class="card card--background-gray" style="min-height: 197px;"><div class="p-4"><div class=""><div aria-hidden="true" class="card__color-code mb-1 card__color-code--blog"></div> <div class="align-items-center card__badge d-flex justify-content-between"><div class="align-self-start card__badge__label text--bold text--extra-small text--uppercase">Albert Carlton-Cashiers Community Library</div> <div class="card__badge__explainer text--extra-small text--right">Cashiers
